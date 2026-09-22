@@ -1,0 +1,52 @@
+.process {
+  border-top: 1px solid var(--border);
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  color: var(--circuit);
+  font-family: var(--font-mono, monospace);
+}
+
+.heading {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin-top: 0.75rem;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.step:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.number {
+  font-family: var(--font-mono, monospace);
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.stepTitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+
+.stepDescription {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}

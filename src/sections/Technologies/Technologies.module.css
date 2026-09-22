@@ -1,0 +1,48 @@
+.tech {
+  border-top: 1px solid var(--border);
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  color: var(--circuit);
+  font-family: var(--font-mono, monospace);
+}
+
+.heading {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin-top: 0.75rem;
+}
+
+.categories {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+.category {
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+.categoryLabel {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+@media (min-width: 720px) {
+  .categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

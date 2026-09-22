@@ -1,0 +1,35 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 480px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(var(--border) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(90deg, var(--border) 1px, transparent 1px) 0 0 / 32px 32px,
+    var(--bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--circuit);
+  box-shadow: 0 0 12px var(--circuit);
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--text-faint);
+  font-size: 0.8rem;
+  font-family: var(--font-mono, monospace);
+  padding: 1rem;
+}

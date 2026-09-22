@@ -1,0 +1,31 @@
+/*
+  Tokens de design — paleta "placa de circuito à noite":
+  base grafite/azulado escuro, um âmbar de LED como acento principal
+  e um ciano de trilha de circuito como acento secundário/discreto.
+  Evitar: creme+terracota e preto+verde-ácido (combinações padrão de IA).
+*/
+:root {
+  --bg: #0b0d12;
+  --bg-elevated: #12141b;
+  --surface: #171a22;
+  --border: #262b36;
+  --border-strong: #3a4152;
+
+  --text: #eef0f4;
+  --text-muted: #9099ac;
+  --text-faint: #5c6579;
+
+  --accent: #ffb454; /* âmbar de LED */
+  --accent-soft: rgba(255, 180, 84, 0.14);
+  --circuit: #4fd1c5; /* ciano de trilha */
+  --circuit-soft: rgba(79, 209, 197, 0.12);
+
+  --font-display: var(--font-display-src), "Segoe UI", sans-serif;
+  --font-body: var(--font-body-src), "Segoe UI", sans-serif;
+
+  --content-width: 1140px;
+  --section-padding: clamp(4rem, 10vw, 7rem);
+  --radius: 6px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
