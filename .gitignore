@@ -1,1 +1,16 @@
-node_modules
+# dependências
+node_modules/
+
+# build do Next.js
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts.bak
+
+# ambiente
+.env*.local
+.vercel
+
+# sistema
+.DS_Store
+npm-debug.log*

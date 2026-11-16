@@ -1,52 +1,107 @@
-.process {
-  border-top: 1px solid var(--border);
+.grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: start;
 }
 
-.header {
-  margin-bottom: 3rem;
-}
-
-.label {
-  font-size: 0.85rem;
-  color: var(--circuit);
-  font-family: var(--font-mono, monospace);
+.intro {
+  position: sticky;
+  top: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
 }
 
 .heading {
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
-  margin-top: 0.75rem;
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  letter-spacing: -0.05em;
 }
 
-.timeline {
+.lead {
+  color: var(--text-muted);
+  max-width: 24rem;
+}
+
+.steps {
   position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 2.6rem;
   display: flex;
   flex-direction: column;
+  gap: clamp(3rem, 8vh, 5.5rem);
+}
+
+.line {
+  position: absolute;
+  left: 0.45rem;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 1px;
+  background: var(--border-strong);
+}
+
+.line span {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(var(--accent), var(--circuit));
+  transform-origin: top;
+  box-shadow: 0 0 12px var(--accent);
 }
 
 .step {
+  position: relative;
   display: grid;
-  grid-template-columns: 3.5rem 1fr;
-  gap: 1.25rem;
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--border);
+  grid-template-columns: 4.5rem 1fr;
+  gap: 1rem;
 }
 
-.step:last-child {
-  border-bottom: 1px solid var(--border);
+.dot {
+  position: absolute;
+  left: calc(-2.6rem + 0.45rem - 5px);
+  top: 0.55rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--bg), 0 0 18px var(--accent);
 }
 
 .number {
-  font-family: var(--font-mono, monospace);
-  color: var(--accent);
-  font-size: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding-top: 0.5rem;
 }
 
 .stepTitle {
-  font-size: 1.1rem;
-  margin-bottom: 0.35rem;
+  font-size: clamp(1.8rem, 3.6vw, 3rem);
+  letter-spacing: -0.04em;
+  margin-bottom: 0.7rem;
 }
 
-.stepDescription {
+.stepText {
   color: var(--text-muted);
-  font-size: 0.92rem;
+  max-width: 28rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    position: relative;
+    top: 0;
+  }
+
+  .step {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .number {
+    padding-top: 0;
+  }
 }

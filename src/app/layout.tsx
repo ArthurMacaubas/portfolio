@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import { profile } from "@/data/profile";
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import Preloader from "@/components/Preloader/Preloader";
+import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["400", "500", "600"],
   variable: "--font-display-src",
   display: "swap",
 });
@@ -17,6 +19,13 @@ const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-body-src",
+  display: "swap",
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono-src",
   display: "swap",
 });
 
@@ -34,6 +43,7 @@ export const metadata: Metadata = {
     "IFRO",
     "Next.js",
     "ESP32",
+    "three.js",
     "desenvolvimento web",
   ],
   authors: [{ name: profile.fullName, url: profile.github }],
@@ -59,12 +69,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${spaceGrotesk.variable} ${inter.variable}`}>
+    <html lang="pt-BR" className={`${spaceGrotesk.variable} ${inter.variable} ${mono.variable}`}>
       <body>
+        <Preloader />
         <CustomCursor />
-        <Navbar />
-        {children}
-        <Footer />
+        <SmoothScroll>
+          <Navbar />
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

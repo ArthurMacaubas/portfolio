@@ -1,20 +1,70 @@
-.cursor {
+.ringWrap,
+.dotWrap {
   position: fixed;
   top: 0;
   left: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 1px solid var(--accent);
+  z-index: 150;
   pointer-events: none;
-  z-index: 999;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s var(--ease-out), height 0.2s var(--ease-out),
-    background-color 0.2s var(--ease-out);
+  transition: opacity 0.3s;
 }
 
-.cursorActive {
-  width: 34px;
-  height: 34px;
-  background: var(--accent-soft);
+.hidden {
+  opacity: 0;
+}
+
+.ring {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  border-radius: 50%;
+  border: 1px solid rgba(242, 240, 235, 0.45);
+  display: grid;
+  place-items: center;
+  transition:
+    width 0.45s var(--ease-out),
+    height 0.45s var(--ease-out),
+    margin 0.45s var(--ease-out),
+    background 0.3s,
+    border-color 0.3s;
+}
+
+.link {
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  background: rgba(242, 240, 235, 0.08);
+  border-color: rgba(242, 240, 235, 0.7);
+  backdrop-filter: blur(2px);
+}
+
+.label {
+  width: 96px;
+  height: 96px;
+  margin: -48px 0 0 -48px;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.text {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg);
+  font-weight: 600;
+}
+
+.dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border-radius: 50%;
+  background: var(--text);
+  transition: transform 0.3s var(--ease-out);
+}
+
+.dotHidden {
+  transform: scale(0);
 }

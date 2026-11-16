@@ -1,0 +1,18 @@
+.wrap {
+  display: inline;
+}
+
+.mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  /* folga para descendentes e itálico não serem cortados pela máscara */
+  padding: 0 0.08em 0.1em 0;
+  margin: 0 -0.08em -0.1em 0;
+}
+
+.word {
+  display: inline-block;
+  transform-origin: left bottom;
+  will-change: transform;
+}

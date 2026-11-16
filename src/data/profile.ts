@@ -10,6 +10,6 @@ export const profile = {
   },
   bio:
     "Estudante de Técnico em Informática no IFRO, apaixonado por transformar ideias em sistemas, experiências digitais e projetos que conectam software e hardware.",
-  github: "https://github.com/Arthur-macaubas",
+  github: "https://github.com/ArthurMacaubas",
   email: "arthurpietro847@gmail.com",
 } as const;

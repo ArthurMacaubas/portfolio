@@ -1,0 +1,35 @@
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.6rem 0;
+}
+
+.track {
+  display: inline-flex;
+  will-change: transform;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-right: 2.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.item:nth-child(even) {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-muted);
+}
+
+.star {
+  font-size: 0.4em;
+  color: var(--accent);
+  -webkit-text-stroke: 0;
+}

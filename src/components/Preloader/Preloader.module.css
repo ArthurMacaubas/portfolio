@@ -1,0 +1,57 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: #050506;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--gutter);
+  clip-path: inset(0 0 0 0);
+  /* Fallback caso o JS não rode */
+  animation: fallbackHide 0.6s 4s forwards;
+}
+
+@keyframes fallbackHide {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.bar {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 50%;
+  height: 1px;
+  background: var(--border);
+}
+
+.barFill {
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform-origin: left;
+  box-shadow: 0 0 16px var(--accent);
+}
+
+.count {
+  align-self: flex-end;
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 20vw, 16rem);
+  font-weight: 500;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  font-variant-numeric: tabular-nums;
+}

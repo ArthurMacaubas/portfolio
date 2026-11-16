@@ -1,4 +1,4 @@
-// Campos opcionais ficam ausentes quando ainda nao ha evidencia publica suficiente.
+// Campos opcionais ficam ausentes quando ainda não há evidência pública suficiente.
 export type Project = {
   slug: string;
   title: string;
@@ -20,10 +20,10 @@ export const projects: Project[] = [
     slug: "rpg-studio",
     title: "RPG Campaign Studio",
     description:
-      "Software para criacao, organizacao e execucao de campanhas de RPG.",
+      "Software para criação, organização e execução de campanhas de RPG.",
     longDescription:
-      "O README descreve uma aplicacao com campanhas, arquivos, sistemas de RPG, linha do tempo, quadro de investigacao, modo jogador, importacao e exportacao e autenticacao propria.",
-    objective: "Centralizar a preparacao e a execucao de campanhas de RPG em uma unica aplicacao.",
+      "O README descreve uma aplicação com campanhas, arquivos, sistemas de RPG, linha do tempo, quadro de investigação, modo jogador, importação e exportação e autenticação própria.",
+    objective: "Centralizar a preparação e a execução de campanhas de RPG em uma única aplicação.",
     category: ["Web", "Full Stack"],
     technologies: ["Next.js", "TypeScript", "CSS Modules", "Node.js", "Prisma", "PostgreSQL"],
     github: "https://github.com/ArthurMacaubas/RPG-Studio",
@@ -36,9 +36,9 @@ export const projects: Project[] = [
     slug: "barraca-edinfo",
     title: "BarracaEdinfo",
     description:
-      "Aplicacao em TypeScript com cliente, servidor, dados locais e firmware para Arduino.",
+      "Aplicação em TypeScript com cliente, servidor, dados locais e firmware para Arduino.",
     longDescription:
-      "O repositorio publico organiza a aplicacao em cliente, servidor, codigo compartilhado, Drizzle e firmware para a Barraca Agostina. Nao ha descricao publica adicional no GitHub.",
+      "O repositório público organiza a aplicação em cliente, servidor, código compartilhado, Drizzle e firmware para a Barraca Agostina. Não há descrição pública adicional no GitHub.",
     category: ["Full Stack", "Hardware", "Automação"],
     technologies: ["TypeScript", "JavaScript", "CSS", "Arduino"],
     github: "https://github.com/ArthurMacaubas/BarracaEdinfo",
@@ -51,8 +51,8 @@ export const projects: Project[] = [
     description:
       "Sistema de reconhecimento facial com Arduino e um computador externo.",
     longDescription:
-      "O README descreve uma arquitetura hibrida: o Arduino atua como controlador e o processamento de reconhecimento facial acontece em um computador.",
-    objective: "Combinar controle por hardware com processamento de visao computacional em um computador.",
+      "O README descreve uma arquitetura híbrida: o Arduino atua como controlador e o processamento de reconhecimento facial acontece em um computador.",
+    objective: "Combinar controle por hardware com processamento de visão computacional em um computador.",
     category: ["Hardware", "Automação", "Experimentos"],
     technologies: ["Arduino", "Python", "OpenCV", "pySerial", "NumPy", "face_recognition"],
     github: "https://github.com/ArthurMacaubas/BiometryCam",
@@ -73,13 +73,13 @@ export const projects: Project[] = [
   },
   {
     slug: "nacoes-sob-fogo",
-    title: "Nacoes Sob Fogo",
-    description: "Projeto de Ensino Continuo sobre geopolitica e o conflito entre Russia e Ucrania.",
+    title: "Nações Sob Fogo",
+    description: "Projeto de Ensino Contínuo sobre geopolítica e o conflito entre Rússia e Ucrânia.",
     category: ["Web", "Acadêmico"],
     technologies: ["HTML", "CSS"],
     github: "https://github.com/ArthurMacaubas/Nacoes-Sob-Fogo",
     demo: "https://arthurmacaubas.github.io/Nacoes-Sob-Fogo/",
-    status: "Academico",
+    status: "Acadêmico",
     published: true,
   },
   {
@@ -103,14 +103,6 @@ export const projects: Project[] = [
     title: "PersonalFit",
     description: "",
     category: ["Web", "Frontend", "Backend"],
-    technologies: [],
-    published: false,
-  },
-  {
-    slug: "rpg-campaign-studio",
-    title: "RPG Campaign Studio",
-    description: "",
-    category: ["Web", "Full Stack"],
     technologies: [],
     published: false,
   },
